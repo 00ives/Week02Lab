@@ -25,13 +25,13 @@ public class SpendingSpree {
         
         String userChoice = input.nextLine();
         
-        if (userChoice.toLowerCase() == "yes"){
+        if (userChoice.toLowerCase().equals("yes") ){
             wallet = significantOtherGoesToTown(wallet);
         }else {thoughts = "fewf";}
-       
-       // boolean spendingSpree = false;
-                
-                
+        
+        if (wallet <= 0){thoughts = "uh oh";}
+        
+        System.out.println(thoughts);       
     }
     
     public static Double significantOtherGoesToTown(double wallet){
