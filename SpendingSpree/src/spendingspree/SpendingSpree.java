@@ -20,16 +20,20 @@ public class SpendingSpree {
         Scanner input = new Scanner(System.in);
         double wallet = 200;
         String thoughts = "";
+        String userChoice = "";
+                
+        while(!userChoice.toLowerCase().equals("yes") && !userChoice.toLowerCase().equals("no")){
+        System.out.println("Honey are you going to the mall?((enter yes/no): ");
         
-        System.out.println("Honey are you going to the mall?((enter yes/no ): ");
+        userChoice = input.nextLine();
+        }
         
-        String userChoice = input.nextLine();
-        
-        if (userChoice.toLowerCase().equals("yes") ){
-            wallet = significantOtherGoesToTown(wallet);
-        }else {thoughts = "fewf";}
-        
-        if (wallet <= 0){thoughts = "uh oh";}
+            
+            if (userChoice.toLowerCase().equals("yes") ){
+                wallet = significantOtherGoesToTown(wallet);
+            }else if(userChoice.toLowerCase().equals("no")) {thoughts = "fewf";}
+
+            if (wallet <= 0){thoughts = "uh oh";}
         
         System.out.println(thoughts);       
     }
